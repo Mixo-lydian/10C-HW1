@@ -27,6 +27,7 @@ private:
 class Hand {
 public:
 	Hand();
+	void draw();
 	double calcValue() const;
 	void printHand();
 private:
