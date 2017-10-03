@@ -23,5 +23,6 @@ int main() {
 	Hand dealerHand;
 
 	playerHand.printHand();
+	dealerHand.printHand();
 	return 0;
 }

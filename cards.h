@@ -11,6 +11,7 @@ enum rank_t { AS, DOS, TRES, CUATRO, CINCO, SEIS, SIETE, SOTA = 9, CABALLO = 10,
 using namespace std;
 
 class Card {
+public:
 	Card();
 	string get_spanish_suit() const;
 	string get_spanish_rank() const;
@@ -24,6 +25,7 @@ private:
 };
 
 class Hand {
+public:
 	Hand();
 	double calcValue() const;
 	void printHand();
@@ -32,6 +34,7 @@ private:
 };
 
 class Player {
+public:
 	Player(int m);
 	void update_money(int change);
 	int get_money() const;

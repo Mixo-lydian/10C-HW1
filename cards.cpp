@@ -188,7 +188,8 @@ Hand class
 ************************************************* */
 // Implemente the member functions of the Hand class here.
 Hand::Hand() {
-	v.push_back(Card);
+	Card c;
+	v.push_back(c);
 }
 
 double Hand::calcValue() const {
