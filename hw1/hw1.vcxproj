@@ -142,6 +142,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\cards.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\cards.cpp" />
+    <ClCompile Include="..\hw7.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
