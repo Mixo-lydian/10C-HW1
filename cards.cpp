@@ -191,6 +191,23 @@ Hand::Hand() {
 	v.push_back(Card);
 }
 
+double Hand::calcValue() const {
+	double value;
+	for (int i = 0; i < v.size(); i++) {
+		if (v[i].get_rank() > 7) value += 0.5;
+		else value += v[i].get_rank();
+	}
+	return value;
+}
+
+void Hand::printHand() {
+	using namespace std;
+	for (int i = 0; i < v.size(); i++) {
+		cout << v[i].get_english_rank() << " of " << v[i].get_english_suit() << endl;
+	}
+	return;
+}
+
 
 /* *************************************************
 Player class

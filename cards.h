@@ -25,6 +25,8 @@ private:
 
 class Hand {
 	Hand();
+	double calcValue() const;
+	void printHand();
 private:
 	vector<Card> v;
 };

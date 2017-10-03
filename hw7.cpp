@@ -18,6 +18,10 @@ using namespace std;
 
 // Stub for main
 int main() {
-	/* --STATEMENTS-- */
+	Player player(100);
+	Hand playerHand;
+	Hand dealerHand;
+
+	playerHand.printHand();
 	return 0;
 }
