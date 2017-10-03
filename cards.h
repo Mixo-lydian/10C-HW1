@@ -38,3 +38,5 @@ class Player {
 private:
 	int money;
 };
+
+#endif
