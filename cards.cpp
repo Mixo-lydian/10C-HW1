@@ -187,7 +187,9 @@ bool Card::operator < (Card card2) const {
 Hand class
 ************************************************* */
 // Implemente the member functions of the Hand class here.
-
+Hand::Hand() {
+	v.push_back(Card);
+}
 
 
 /* *************************************************
