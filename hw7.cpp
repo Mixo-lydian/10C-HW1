@@ -35,7 +35,9 @@ int main() {
 		}
 		player.update_money(-1 * bet);
 		while (askForDraw) {
-			cout << "Your hand:" << endl << playerHand.printHand() << endl;
+			cout << "Your hand:" << endl;
+			playerHand.printHand();
+			cout << endl;
 			cout << "Total: " << playerHand.calcValue() << ". Draw another? (Y/N): ";
 			cin >> draw;
 			if (draw == "Y" || draw == "y") playerHand.draw();
