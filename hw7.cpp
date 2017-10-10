@@ -8,7 +8,6 @@
 using namespace std;
 
 // Global constants (if any)
-// Test
 
 // Non member functions declarations (if any)
 
