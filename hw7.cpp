@@ -79,6 +79,14 @@ int main() {
 		else if (playerHand.calcValue() == dealerHand.calcValue()) {
 			cout << "A draw! No one wins." << endl << endl;
 		}
+		if (player.get_money() == 0) {
+			keepPlaying = false;
+			cout << "You have lost all of your credits. Game over!" << endl;
+		}
+		else if (player.get_money() >= 1000) {
+			keepPlaying = false;
+			cout << "You have reached a credit count of 1000 or more. You win!" << endl;
+		}
 	}
 	return 0;
 }
