@@ -194,13 +194,13 @@ Hand::Hand() {
 
 void Hand::draw() {
 	Card c;
-	cout << "New card: " << v[i].get_spanish_rank() << " de " << v[i].get_spanish_suit() << " (" << v[i].get_english_rank() << " of " << v[i].get_english_suit() << ")" << endl;
+	cout << "New card: " << c.get_spanish_rank() << " de " << c.get_spanish_suit() << " (" << c.get_english_rank() << " of " << c.get_english_suit() << ")" << endl << endl;
 	v.push_back(c);
 	return;
 }
 
 double Hand::calcValue() const {
-	double value;
+	double value = 0;
 	for (int i = 0; i < v.size(); i++) {
 		if (v[i].get_rank() > 7) value += 0.5;
 		else value += v[i].get_rank();
