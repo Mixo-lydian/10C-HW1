@@ -57,7 +57,6 @@ void dealerTurn(Hand& hand) {
 	return;
 }
 
-// Stub for main
 int main() {
 	Player player(100);
 	ofstream fout;
@@ -89,6 +88,7 @@ int main() {
 		}
 		else if (playerHand.calcValue() == dealerHand.calcValue()) {
 			cout << "A draw! No one wins." << endl << endl;
+			player.update_money(bet);
 		}
 		if (player.get_money() == 0) {
 			keepPlaying = false;
