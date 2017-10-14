@@ -1,8 +1,8 @@
 # 10C HW 1: Siete y medio
 
-This project is a single-player version of the game "siete y medio", where the goal is to draw cards to get closest to a score of 7.5 without going over ("busting"). The player bets credits before each game, and faces an AI dealer who draws as long as their total is less than 5.5. On a win, the player receives twice their bet as a reward. On a draw, the player receives their bet back. On a loss, the player loses their bet to the dealer.
+This project is a single-player version of the game "siete y medio", where the goal is to draw cards to get closest to a score of 7.5 without going over ("busting"). The player bets credits before each game, and faces an AI dealer who draws as long as their total is less than 5.5. On a win (player > dealer without busting, or dealer busts and player didn't), the player receives twice their bet as a reward. On a draw, the player receives their bet back. On a loss (player < dealer without busting, or player busts), the player loses their bet to the dealer.
 
-The goal of the game is to accumulate 1000+ credits, which means that the dealer must lose 900 credits. Doing so will result in a win. Reaching 0 credits will result in a loss. All games are logged in an output text file.
+The goal of the game is to accumulate 1000+ credits, which means that the dealer must lose 900 credits. Doing so will result in an overall win. Reaching 0 credits, however, will result in an overall loss. All games are logged in an output text file.
 
 --- 
 Files in this repo:
