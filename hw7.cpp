@@ -57,6 +57,44 @@ void dealerTurn(Hand& hand) {
 	return;
 }
 
+void playGame(Player& player, int& gameCounter, ostream& fout, bool& keepPlaying) {
+	gameCounter++;
+	Hand playerHand;
+	Hand dealerHand;
+	int bet = 0;
+	cout << "You have " << player.get_money() << " credits. Bet how many?: ";
+	bool askForBet = true;
+	bool askForDraw = true;
+	while (askForBet) {
+		cin >> bet;
+		if (bet > player.get_money() || bet < 0 || bet == 0) cout << "Invalid bet. Enter another bet: ";
+		else askForBet = false;
+	}
+	player.update_money(-1 * bet);
+	playerTurn(playerHand);
+	dealerTurn(dealerHand);
+	if (playerHand.calcValue() > 7.5 || (playerHand.calcValue() < dealerHand.calcValue() && dealerHand.calcValue() <= 7.5)) {
+		cout << "You lost! Too bad." << endl << endl;
+	}
+	else if (playerHand.calcValue() > dealerHand.calcValue() || dealerHand.calcValue() > 7.5) {
+		cout << "You won! You gained " << bet << " credits." << endl << endl;
+		player.update_money(2 * bet);
+	}
+	else if (playerHand.calcValue() == dealerHand.calcValue()) {
+		cout << "A draw! No one wins." << endl << endl;
+		player.update_money(bet);
+	}
+	if (player.get_money() == 0) {
+		keepPlaying = false;
+		cout << "You have lost all of your credits. Game over!" << endl;
+	}
+	else if (player.get_money() >= 1000) {
+		keepPlaying = false;
+		cout << "You have reached a credit count of 1000 or more. You win!" << endl;
+	}
+	outputRound(fout, gameCounter, player, bet, playerHand, dealerHand);
+}
+
 int main() {
 	Player player(100);
 	ofstream fout;
@@ -64,41 +102,7 @@ int main() {
 	bool keepPlaying = true;
 	int gameCounter = 0;
 	while (keepPlaying) {
-		gameCounter++;
-		Hand playerHand;
-		Hand dealerHand;
-		int bet = 0;
-		cout << "You have " << player.get_money() << " credits. Bet how many?: ";
-		bool askForBet = true;
-		bool askForDraw = true;
-		while (askForBet) {
-			cin >> bet;
-			if (bet > player.get_money() || bet < 0 || bet == 0) cout << "Invalid bet. Enter another bet: ";
-			else askForBet = false;
-		}
-		player.update_money(-1 * bet);
-		playerTurn(playerHand);
-		dealerTurn(dealerHand);
-		if (playerHand.calcValue() > 7.5 || (playerHand.calcValue() < dealerHand.calcValue() && dealerHand.calcValue() <= 7.5)) {
-			cout << "You lost! Too bad." << endl << endl;
-		}
-		else if (playerHand.calcValue() > dealerHand.calcValue() || dealerHand.calcValue() > 7.5) {
-			cout << "You won! You gained " << bet << " credits." << endl << endl;
-			player.update_money(2 * bet);
-		}
-		else if (playerHand.calcValue() == dealerHand.calcValue()) {
-			cout << "A draw! No one wins." << endl << endl;
-			player.update_money(bet);
-		}
-		if (player.get_money() == 0) {
-			keepPlaying = false;
-			cout << "You have lost all of your credits. Game over!" << endl;
-		}
-		else if (player.get_money() >= 1000) {
-			keepPlaying = false;
-			cout << "You have reached a credit count of 1000 or more. You win!" << endl;
-		}
-		outputRound(fout, gameCounter, player, bet, playerHand, dealerHand);
+		playGame(player, gameCounter, fout, keepPlaying);
 	}
 	fout.close();
 	return 0;
