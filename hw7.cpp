@@ -7,12 +7,19 @@
 #include "cards.h"
 using namespace std;
 
-// Global constants (if any)
+void outputRound(ostream& o, const int& gameCounter, const Player& player, const int& bet, Hand playerHand, Hand dealerHand) {
+	o << "-----------------------------------------------" << endl << endl;
+	o << "Game number: " << gameCounter << "\tCredits left: " << player.get_money() << endl;
+	o << "You bet: " << bet << " credits" << endl << endl;
+	o << "Your cards:" << endl;
+	playerHand.printHand();
+	o << "Your total: " << playerHand.calcValue() << endl << endl;
+	o << "Dealer's cards:" << endl;
+	dealerHand.printHand();
+	o << "Dealer's total: " << dealerHand.calcValue() << endl << endl;
+	return;
+}
 
-// Non member functions declarations (if any)
-
-
-// Non member functions implementations (if any)
 void playerTurn(Hand& hand) {
 	bool askForDraw = true;
 	while (askForDraw) {
@@ -59,8 +66,6 @@ int main() {
 	int gameCounter = 0;
 	while (keepPlaying) {
 		gameCounter++;
-		fout << "-----------------------------------------------" << endl << endl;
-		fout << "Game number: " << gameCounter << "\tCredits left: " << player.get_money();
 		Hand playerHand;
 		Hand dealerHand;
 		int bet = 0;
@@ -93,6 +98,7 @@ int main() {
 			keepPlaying = false;
 			cout << "You have reached a credit count of 1000 or more. You win!" << endl;
 		}
+		outputRound(fout, gameCounter, player, bet, playerHand, dealerHand);
 	}
 	fout.close();
 	return 0;

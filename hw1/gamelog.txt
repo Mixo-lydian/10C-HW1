@@ -1,0 +1,22 @@
+-----------------------------------------------
+
+Game number: 1	Credits left: 100You bet: 1 credits
+
+Your cards:
+Your total: 6
+
+Dealer's cards:
+Dealer's total: 6
+
+-----------------------------------------------
+
+Game number: 2	Credits left: 99You bet: 99 credits
+
+Your cards:
+Your total: 6
+
+Dealer's cards:
+Dealer's total: 5.5
+
+-----------------------------------------------
+
