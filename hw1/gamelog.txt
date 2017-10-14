@@ -1,7 +1,7 @@
 -----------------------------------------------
 
 Game number: 1	Credits left: 100
-You bet: 10 credits
+You bet: 100 credits
 
 Your cards:
 	Sota de copas (Jack of cups)
@@ -13,4 +13,47 @@ Dealer's cards:
 	As de espadas (Ace of swords)
 	Cinco de espadas (Five of swords)
 Dealer's total: 6
+
+-----------------------------------------------
+
+Game number: 2	Credits left: 200
+You bet: 100 credits
+
+Your cards:
+	Seis de copas (Six of cups)
+Your total: 6
+
+Dealer's cards:
+	Sota de copas (Jack of cups)
+	Dos de copas (Two of cups)
+	Tres de bastos (Three of clubs)
+Dealer's total: 5.5
+
+-----------------------------------------------
+
+Game number: 3	Credits left: 400
+You bet: 200 credits
+
+Your cards:
+	Siete de bastos (Seven of clubs)
+Your total: 7
+
+Dealer's cards:
+	Cinco de bastos (Five of clubs)
+	Cuatro de espadas (Four of swords)
+Dealer's total: 9
+
+-----------------------------------------------
+
+Game number: 4	Credits left: 0
+You bet: 400 credits
+
+Your cards:
+	Tres de oros (Three of golds)
+	Seis de espadas (Six of swords)
+Your total: 9
+
+Dealer's cards:
+	Siete de copas (Seven of cups)
+Dealer's total: 7
 
