@@ -208,10 +208,10 @@ double Hand::calcValue() const {
 	return value;
 }
 
-void Hand::printHand() {
+void Hand::printHand(ostream& o) {
 	using namespace std;
 	for (int i = 0; i < v.size(); i++) {
-		cout << v[i].get_spanish_rank() << " de " << v[i].get_spanish_suit() << " (" << v[i].get_english_rank() << " of " << v[i].get_english_suit() << ")" << endl;
+		o << v[i].get_spanish_rank() << " de " << v[i].get_spanish_suit() << " (" << v[i].get_english_rank() << " of " << v[i].get_english_suit() << ")" << endl;
 	}
 	return;
 }

@@ -12,10 +12,10 @@ void outputRound(ostream& o, const int& gameCounter, const Player& player, const
 	o << "Game number: " << gameCounter << "\tCredits left: " << player.get_money() << endl;
 	o << "You bet: " << bet << " credits" << endl << endl;
 	o << "Your cards:" << endl;
-	playerHand.printHand();
+	playerHand.printHand(o);
 	o << "Your total: " << playerHand.calcValue() << endl << endl;
 	o << "Dealer's cards:" << endl;
-	dealerHand.printHand();
+	dealerHand.printHand(o);
 	o << "Dealer's total: " << dealerHand.calcValue() << endl << endl;
 	return;
 }
@@ -25,7 +25,7 @@ void playerTurn(Hand& hand) {
 	while (askForDraw) {
 		string draw = "";
 		cout << "Your hand:" << endl;
-		hand.printHand();
+		hand.printHand(cout);
 		cout << "Total: " << hand.calcValue() << ". Draw another? (Y/N): ";
 		cin >> draw;
 		cout << endl;
@@ -37,7 +37,7 @@ void playerTurn(Hand& hand) {
 		}
 		if (hand.calcValue() >= 7.5) {
 			cout << "Your final hand:" << endl;
-			hand.printHand();
+			hand.printHand(cout);
 			cout << "Total: " << hand.calcValue() << endl << endl;
 			askForDraw = false;
 		}
@@ -49,7 +49,7 @@ void dealerTurn(Hand& hand) {
 	bool askForDraw = true;
 	while (askForDraw) {
 		cout << "Dealer's hand:" << endl;
-		hand.printHand();
+		hand.printHand(cout);
 		cout << "Total: " << hand.calcValue() << "." << endl << endl;
 		if (hand.calcValue() < 5.5) hand.draw();
 		else askForDraw = false;

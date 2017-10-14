@@ -29,7 +29,7 @@ public:
 	Hand();
 	void draw();
 	double calcValue() const;
-	void printHand();
+	void printHand(ostream& o);
 private:
 	vector<Card> v;
 };
