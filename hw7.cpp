@@ -53,8 +53,14 @@ void dealerTurn(Hand& hand) {
 // Stub for main
 int main() {
 	Player player(100);
+	ofstream fout;
+	fout.open("gamelog.txt");
 	bool keepPlaying = true;
+	int gameCounter = 0;
 	while (keepPlaying) {
+		gameCounter++;
+		fout << "-----------------------------------------------" << endl << endl;
+		fout << "Game number: " << gameCounter << "\tCredits left: " << player.get_money();
 		Hand playerHand;
 		Hand dealerHand;
 		int bet = 0;
@@ -88,5 +94,6 @@ int main() {
 			cout << "You have reached a credit count of 1000 or more. You win!" << endl;
 		}
 	}
+	fout.close();
 	return 0;
 }
