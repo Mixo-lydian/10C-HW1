@@ -211,7 +211,7 @@ double Hand::calcValue() const {
 void Hand::printHand(ostream& o) {
 	using namespace std;
 	for (int i = 0; i < v.size(); i++) {
-		o << v[i].get_spanish_rank() << " de " << v[i].get_spanish_suit() << " (" << v[i].get_english_rank() << " of " << v[i].get_english_suit() << ")" << endl;
+		o << "\t" << v[i].get_spanish_rank() << " de " << v[i].get_spanish_suit() << " (" << v[i].get_english_rank() << " of " << v[i].get_english_suit() << ")" << endl;
 	}
 	return;
 }
