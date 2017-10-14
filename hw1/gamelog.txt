@@ -1,6 +1,6 @@
 -----------------------------------------------
 
-Game number: 1	Credits left: 100
+Game number: 0	Credits left: 100
 You bet: 100 credits
 
 Your cards:
@@ -16,7 +16,7 @@ Dealer's total: 6
 
 -----------------------------------------------
 
-Game number: 2	Credits left: 200
+Game number: 1	Credits left: 100
 You bet: 100 credits
 
 Your cards:
@@ -31,7 +31,7 @@ Dealer's total: 5.5
 
 -----------------------------------------------
 
-Game number: 3	Credits left: 400
+Game number: 2	Credits left: 200
 You bet: 200 credits
 
 Your cards:
@@ -45,8 +45,8 @@ Dealer's total: 9
 
 -----------------------------------------------
 
-Game number: 4	Credits left: 0
-You bet: 400 credits
+Game number: 3	Credits left: 400
+You bet: 10 credits
 
 Your cards:
 	Tres de oros (Three of golds)
@@ -57,3 +57,22 @@ Dealer's cards:
 	Siete de copas (Seven of cups)
 Dealer's total: 7
 
+-----------------------------------------------
+
+Game number: 4	Credits left: 390
+You bet: 10 credits
+
+Your cards:
+	Siete de bastos (Seven of clubs)
+Your total: 7
+
+Dealer's cards:
+	Caballo de bastos (Knight of clubs)
+	Tres de copas (Three of cups)
+	Rey de bastos (King of clubs)
+	Cinco de bastos (Five of clubs)
+Dealer's total: 9
+
+-----------------------------------------------
+
+Game number: 5	Credits left: 400

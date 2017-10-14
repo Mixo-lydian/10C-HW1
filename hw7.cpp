@@ -8,8 +8,6 @@
 using namespace std;
 
 void outputRound(ostream& o, const int& gameCounter, const Player& player, const int& bet, Hand playerHand, Hand dealerHand) {
-	o << "-----------------------------------------------" << endl << endl;
-	o << "Game number: " << gameCounter << "\tCredits left: " << player.get_money() << endl;
 	o << "You bet: " << bet << " credits" << endl << endl << "Your cards:" << endl;
 	playerHand.printHand(o);
 	o << "Your total: " << playerHand.calcValue() << endl << endl << "Dealer's cards:" << endl;
@@ -56,6 +54,8 @@ void dealerTurn(Hand& hand) {
 }
 
 void playGame(Player& player, int& gameCounter, ostream& fout, bool& keepPlaying) {
+	fout << "-----------------------------------------------" << endl << endl;
+	fout << "Game number: " << gameCounter << "\tCredits left: " << player.get_money() << endl;
 	gameCounter++;
 	Hand playerHand;
 	Hand dealerHand;
